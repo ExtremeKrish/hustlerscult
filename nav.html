@@ -31,11 +31,19 @@
         height: 60px;
         position: fixed;
         display: flex;
-        background: rgb(108, 170, 255);
-        background: linear-gradient(180deg, #0052A2 0%, #00498D 3%, #02386E 48%, #000B18 100%);
         box-shadow: 0px 1px 10px 5px #000;
         left: 56px;
         right: 56px;
+    }
+    
+    main ul li {
+        /* background: #000B18; */
+    }
+    
+    .grd {
+        background: linear-gradient(180deg, #002851 0%, #000B18 100%);
+        background-attachment: fixed;
+        background-position: center;
     }
     
     nav ul {
@@ -82,6 +90,7 @@
     .rightNav ul li img {
         width: 36px;
         height: 36px;
+        border-radius: 32px;
     }
     
     button {
@@ -102,11 +111,13 @@
         display: flex;
         align-items: center;
         padding-left: 29px;
+        padding: 8px 0;
     }
     
     .profile img {
         height: 28px;
         width: 28px;
+        border-radius: 28px;
     }
     
     .profile .hr {
@@ -122,14 +133,17 @@
         font-size: 14px;
     }
     
-    main ul li {
-        background: #000B18;
+    .profile>div>p {
+        font-size: 12px;
+    }
+    
+    .profile>div>#name {
+        font-size: 14px;
     }
     
     main ul li.first {
         height: 60px;
-        background: rgb(108, 170, 255);
-        background: linear-gradient(180deg, #0052A2 0%, #00498D 3%, #02386E 48%, #000B18 100%);
+        /* background: linear-gradient(180deg, #0052A2 0%, #00498D 3%, #02386E 48%, #000B18 100%); */
     }
     
     .rightNav ul li.first span {
@@ -163,14 +177,18 @@
     
     section.top {
         flex: 1;
+        display: flex;
     }
     
-    section.main>section.center>section.bottom ul {
+    section.main>section.center>section.bottom ul,
+    .subbottom ul {
         display: flex;
         list-style: none;
+        margin-top: 20px;
     }
     
-    section.main>section.center>section.bottom ul li {
+    section.main>section.center>section.bottom ul li,
+    .subbottom ul li {
         flex: 1;
         display: flex;
         align-items: center;
@@ -180,18 +198,25 @@
         font-weight: 600;
     }
     
-    section.main>section.center>section.bottom ul li img {
-        height: 50px;
-        width: 50px;
+    section.main>section.center>section.bottom ul li img,
+    .subbottom ul li img {
+        height: 54px;
+        width: 54px;
+        padding: 6px;
         border-radius: 40px;
         background-color: #000B18;
-        box-shadow: 0px 0px 5px 0 #00498D;
+        box-shadow: 0px 0px 5px 2px #000000, inset 0px 0px 4px 3px #1f7cd4;
+        border: 1px solid #00498D;
         margin-bottom: 8px;
+    }
+    
+    .subbottom ul li img {
+        height: 60px;
+        width: 60px;
     }
     
     section .wrapper {
         border-radius: 16px;
-        height: 200px;
         margin: 16px 0;
     }
     
@@ -201,17 +226,72 @@
     }
     
     section .wrapper .lable {
-        height: 50px;
         display: flex;
         background: #feebe4;
         border-radius: 16px;
         align-items: center;
         flex-direction: column;
+        padding: 8px 0;
+    }
+    
+    section .wrapper .lable h1 {}
+    
+    .subcentre>img {
+        display: flex;
+        width: 100%;
+    }
+    
+    .subcentre {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .subbottom>ul {
+        bottom: 0;
+    }
+    
+    .subside {
+        flex: 2;
+        margin: 0 16px;
+    }
+    
+    .subside ul {
+        display: fll;
+        flex-direction: column;
+    }
+    
+    .subside ul li {
+        list-style: none;
+        color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        background-color: #001326;
+        margin: 2px;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 0 0 10px 1px #002f5b;
+        border: 1px solid #002f5b;
+    }
+    
+    .subleft ul li {
+        border-radius: 0px 50px 50px 0;
+    }
+    
+    .subright ul li {
+        border-radius: 50px 0px 0px 50px;
+    }
+    
+    hr {
+        margin: 8px 0;
+        border: 1px solid #7dc0ffaf;
     }
 </style>
 
 <body>
-    <nav>
+    <nav class="grd">
         <ul>
             <li>Home</li>
             <li><button>Sub Cokkies</button></li>
@@ -225,14 +305,14 @@
                     <img src="https://avatar.iran.liara.run/public" alt="" srcset="">
                     <span class="hr"></span>
                     <div>
-                        <p>Krish</p>
-                        <p>alphatenet</p>
+                        <p id="name">Krish</p>
+                        <p>@alphatenet</p>
                     </div>
                 </div>
             </li>
         </ul>
     </nav>
-    <main class="leftNav">
+    <main class="leftNav grd">
         <ul>
             <li class="first"><span class="material-symbols-rounded">home</span></li>
             <li><span class="material-symbols-rounded">bolt</span></li>
@@ -248,20 +328,22 @@
 
         </ul>
     </main>
-    <main class="rightNav">
+    <main class="rightNav grd">
         <ul>
             <li class="first"><span class="material-symbols-rounded">
                 chat
                 </span></li>
+            <li><img src="https://public-files.gumroad.com/6fjhn5cja8x0awjl431ndva0d4sx" alt="" srcset=""></li>
             <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
-            <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
+            <li><img src="data:image/png;base64,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"
+                    alt="" srcset=""></li>
+            <li><img src="pfp/1.jpg" alt="" srcset=""></li>
+            <li><img src="pfp/2.jpg" alt="" srcset=""></li>
+            <li><img src="pfp/3.jpg" alt="" srcset=""></li>
+
+            <li><img src="https://ui-avatars.com/api/?background=random&format=svg&rounded=true&name=John+Doe" alt="" srcset=""></li>
+            <li><img src="https://ui-avatars.com/api/?background=random&format=svg&rounded=true&name=K+V" alt="" srcset=""></li>
+            <li><img src="https://ui-avatars.com/api/?background=random&format=svg&rounded=true&name=Harsh" alt="" srcset=""></li>
             <li><img src="https://avatar.iran.liara.run/public" alt="" srcset=""></li>
 
         </ul>
@@ -270,23 +352,68 @@
         <section class="left">
             <div class="wrapper">
                 <img src="1.png" alt="">
-                <div class="lable"></div>
+                <div class="lable">
+                    <h1>Instagram</h1>
+                    <span>8 Lectures</span>
+                </div>
             </div>
+            <hr>
             <div class="wrapper">
                 <img src="2.png" alt="">
-                <div class="lable"></div>
+                <div class="lable">
+                    <h1>Youtube</h1>
+                    <span>8 Lectures</span></div>
             </div>
         </section>
         <section class="center">
             <section class="top">
-                <section class="subleft">
+                <section class="subleft subside">
                     <ul>
-                        <li></li>
+                        <li>Copywriting</li>
+                        <li>Loream</li>
+                        <li>Ipsum</li>
+                        <li>Dolor Sit</li>
+                        <li>Video Editing</li>
+                        <li>Owelmask</li>
+                        <li>Aura Chill</li>
+                        <li>Luston Mewet</li>
                     </ul>
                 </section>
-                <section class="subcentre"></section>
-                <section class="subright"></section>
+                <section class="subcentre">
+                    <img src="b.png" alt="">
+
+                    <section class="subbottom">
+                        <ul>
+                            <li>
+                                <img src="icons8-edit.svg" alt="">
+                                <span>Copywriting</span>
+                            </li>
+                            <li>
+                                <img src="icons8-stocks.svg" alt="">
+                                <span>Stocks</span>
+                            </li>
+                            <li>
+                                <img src="icons8-youtube.svg" alt="">
+                                <span>Youtube</span>
+                            </li>
+
+                        </ul>
+                    </section>
+                </section>
+                <section class="subright subside">
+                    <ul>
+                        <li>Copywriting</li>
+                        <li>Loream</li>
+                        <li>Ipsum</li>
+                        <li>Dolor Sit</li>
+                        <li>Video Editing</li>
+                        <li>Owelmask</li>
+                        <li>Aura Chill</li>
+                        <li>Luston Mewet</li>
+                    </ul>
+                </section>
             </section>
+            <hr>
             <section class="bottom">
                 <ul>
                     <li>
@@ -320,11 +447,16 @@
         <section class="right">
             <div class="wrapper">
                 <img src="1.png" alt="">
-                <div class="lable"></div>
+                <div class="lable">
+                    <h1>Twitter</h1>
+                    <span>8 Lectures</span></div>
             </div>
+            <hr>
             <div class="wrapper">
                 <img src="2.png" alt="">
-                <div class="lable"></div>
+                <div class="lable">
+                    <h1>Tiktok</h1>
+                    <span>8 Lectures</span></div>
             </div>
 
         </section>
