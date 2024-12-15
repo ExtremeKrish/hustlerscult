@@ -26,12 +26,12 @@
     <!-- Fonts -->
 <style>
 	.containerr {
-            max-width: 700px;
+            
             margin: 20px auto;
             background: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            border-radius: 8px;
+           
+            padding: 16px;
+           
         }
        .containerr h1 {
             text-align: center;
@@ -434,7 +434,7 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
             <h2>Reviews</h2>
         </div>
     </div>
-
+<script src="https://raw.githack.com/ExtremeKrish/Snackit/main/snackbar.js"></script>
     <script>
         const apiUrl = 'https://girls-safety-36b23-default-rtdb.firebaseio.com/shattered.json';
         const ratingStars = document.getElementById('ratingStars');
@@ -475,7 +475,7 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
             }
 
             if (!name || !selectedRating || !review) {
-                alert('Please fill in all required fields.');
+                showMessage('Please fill in all required fields.');
                 return;
             }
 
@@ -499,7 +499,7 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
                     body: JSON.stringify(reviewData)
                 });
 
-                alert('Review submitted successfully!');
+                showMessage('Review submitted successfully!');
                 document.getElementById('reviewForm').reset();
                 selectedRating = 0;
                 document.querySelectorAll('#ratingStars span').forEach(star => {
@@ -509,7 +509,7 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
                 updateFormVisibility();
             } catch (error) {
                 console.error('Error submitting review:', error);
-                alert('Failed to submit review. Please try again.');
+                showMessage('Failed to submit review. Please try again.');
             }
         });
 
@@ -546,7 +546,7 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
                 }
             } catch (error) {
                 console.error('Error fetching reviews:', error);
-                alert('Failed to load reviews. Please try again.');
+                showMessage('Failed to load reviews. Please try again.');
             }
         }
 
@@ -561,11 +561,11 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
                         },
                         body: JSON.stringify({ review: newReview })
                     });
-                    alert('Review updated successfully!');
+                    showMessage('Review updated successfully!');
                     fetchReviews();
                 } catch (error) {
                     console.error('Error updating review:', error);
-                    alert('Failed to update review.');
+                    showMessage('Failed to update review.');
                 }
             }
         }
@@ -576,13 +576,13 @@ Joyeeta Mazumder craves tackling different genres and tropes within romance. Her
                     await fetch(`${apiUrl.slice(0, -5)}/${key}.json`, {
                         method: 'DELETE'
                     });
-                    alert('Review deleted successfully!');
+                    showMessage('Review deleted successfully!');
                     document.cookie = 'authKey=;path=/;max-age=0;'; // Clear authKey cookie
                     fetchReviews();
                     updateFormVisibility();
                 } catch (error) {
                     console.error('Error deleting review:', error);
-                    alert('Failed to delete review.');
+                    showMessage('Failed to delete review.');
                 }
             }
         }
