@@ -38,7 +38,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Geist", sans-serif;
     font-size: 15px;
     letter-spacing: 0.5px;
     line-height: 1.5;
@@ -73,8 +73,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
+font-family: "Crimson Pro", serif;
+font-weight: 600;
     margin-top: 0;
 }
 
@@ -102,7 +102,10 @@ h5 {
 h6 {
     font-size: 18px;
 }
-
+p {
+    font-family: "Crimson Pro", serif;
+font-size: 2rem;
+}
 img {
     border: none;
     max-width: 100%;
@@ -139,7 +142,7 @@ kbd {
     background-color: #ddd;
     padding: 4px 6px;
     border-radius: 2px;
-    color: ;
+    
 }
 
 address {
@@ -270,8 +273,10 @@ button:focus {
 .navbar-default .navbar-brand {
     color: #fff;
     font-size: 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    
+font-family: "Crimson Pro", serif;
+
+font-weight: 500;
     margin-top: -5px;
 }
 
@@ -315,7 +320,7 @@ button:focus {
     border-bottom: 2px solid transparent;
     color: #fff;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 0 0 5px;
     margin: 10px 15px 5px;
     transition: all 0.5s;
@@ -382,8 +387,9 @@ button:focus {
 
 .mu-hero-left h1 {
     color: #fff;
-    font-size: 50px;
+    font-size: 50px!important;
     margin-bottom: 20px;
+    font-weight: 500!important;
 }
 
 .mu-hero-left p {
@@ -403,7 +409,9 @@ button:focus {
     color: #f8f8f8;
 }
 
-
+.container-fluid{
+    padding: 0!important;
+}
 /*--------------------*/
 
 
