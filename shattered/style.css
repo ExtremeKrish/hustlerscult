@@ -274,9 +274,8 @@ button:focus {
     color: #fff;
     font-size: 25px;
     
-font-family: "Crimson Pro", serif;
 
-font-weight: 500;
+font-weight: 600;
     margin-top: -5px;
 }
 
@@ -387,9 +386,10 @@ font-weight: 500;
 
 .mu-hero-left h1 {
     color: #fff;
-    font-size: 50px!important;
-    margin-bottom: 20px;
-    font-weight: 500!important;
+    font-size: 60px!important;
+    margin-bottom: 10px;
+    font-weight: 700!important;
+    font-family: Geist;
 }
 
 .mu-hero-left p {
@@ -1226,6 +1226,11 @@ font-weight: 500;
     .navbar-default .navbar-brand {
         font-size: 25px;
         margin-top: -3px;
+        font-family: Geist;
+    }
+    .navbar-brand a {
+        font-family: Geist;
+
     }
     .navbar-toggle {
         padding: 7px 8px;
